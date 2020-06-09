@@ -7,9 +7,11 @@ $(document).ready(function() {
       $('#grocery-list').toggle();
       $('#updated-grocery-list').toggle();
       const listItems = groceryItemsString.toUpperCase().split(', ').sort();
-      listItems.forEach(item => {
-        $('#modified-grocery-list').append(`<li>${item}</li>`)
-      });
-    } else alert('Please enter your grocery list items')
-  })
-})
+      for (let i = 0; i <= listItems.length-1; i++){
+        $('#modified-grocery-list').append(`<li>${listItems[i]}</li>`)
+      };
+    }
+  });
+});
+
+// listItems.forEach(item => 
